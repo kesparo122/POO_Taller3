@@ -1,15 +1,10 @@
 package ejerciciofigurasgeometricas;
 
 public class Circulo {
-    int radio;
-    
-    void Círculo(int radio) {
-        this.radio = radio;
+    public static double calcularArea(double radio){
+        return (Math.PI*Math.pow(radio, 2));
     }
-    double calcularArea() {
-        return Math.PI*Math.pow(radio,2);
-    }
-    double calcularPerímetro() {
-        return 2*Math.PI*radio;
+    public static double calcularPerímetro(double radio) {
+        return (2*Math.PI*radio);
     }
 }

@@ -116,7 +116,12 @@ public class Ventana extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
-        txtRespuesta.setText(Calcular.calcular());
+        try{
+            txtRespuesta.setText(Calcular.calcular());
+        }
+        catch(NumberFormatException ex){
+            JOptionPane.showMessageDialog(null, "Introduce valores numericos");
+        }
     }//GEN-LAST:event_btnCalcularActionPerformed
 
     private void brnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brnAgregarActionPerformed
